@@ -1,0 +1,25 @@
+package com.biz.student.service;
+
+public class HomeService {
+	
+	
+	private String st_home;
+	private String st_addr;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public void viewHome() {
+		
+		System.out.println(this.st_home);
+		System.out.println(this.st_addr);
+		
+	}
+	
+
+}

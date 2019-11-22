@@ -1,0 +1,39 @@
+package com.biz.student.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.biz.student.domain.StudentDTO;
+
+
+/*
+ * 
+ * 
+ * @Component Annotation을 대신해서 의미있는 이름으로 설정
+ * 
+ * spring bean으로 클래스를 등록
+ * component-scan base-package에 service package를 등록 설정
+ * 
+ * 
+ */
+@Service
+public class StudentService {
+	
+	public List<StudentDTO> getstdList(){
+		
+		
+		List<StudentDTO> stdList = new ArrayList<StudentDTO>();
+		
+		return null;
+		
+		
+		
+		
+	}
+ 	
+	
+	
+	
+}

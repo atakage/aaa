@@ -1,0 +1,187 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page session="false"%>
+<c:set var="rootPath" value="${pageContext.request.contextPath }" />
+<html>
+<head>
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>Home</title>
+
+
+
+
+
+
+
+<style>
+
+
+
+*, html, body{
+	
+	margin:0;
+	padding:0;
+
+
+}
+
+/*
+			header : tag이름
+			{} : 모양에 대한 여러가지 속성 지정
+	*/
+ul {
+
+	/*display:flex;			/*  box model tag의 속성을 inline-box 속성으로 변경하는 것 */
+	list-style:none;		/* list의 머릿글 제거	*/
+	 background-color: lightgrey;
+	/* width: 300px;   */
+	/* border: 15px solid green; */
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	
+}
+
+
+
+
+
+
+li a {
+
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+	
+}
+
+
+a:hover {
+	font-weight: bold;
+	font-style: italic;
+}
+
+body {
+	background-color: lightblue;
+	
+}
+
+header {
+	text-align:center;
+	
+	color: white;
+	margin : 0;
+	padding:1rem;
+}
+
+p {
+	background-color: cyan;
+}
+
+
+p#p1{
+
+
+font-size: 50pt;
+background-color:  blue;
+color:white;
+}
+
+
+
+
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+p.pc{
+
+
+background-color:tomato;
+
+}
+
+img{
+
+	opacity: 0.5;
+	text-align:center;
+
+}
+
+img:hover{
+	
+	opacity: 1.0;
+	
+}
+
+
+</style>
+</head>
+<body>
+
+
+
+	<header>
+		<h3>나의 홈페이지</h3>
+	</header>
+
+
+
+
+	<nav>
+		<ul>
+			<li><a href=""  style="float: left">학생리스트</a></li>
+			<li><a href="#" style="float: left">학생검색</a></li>
+			<li><a href="#" style="float: right">로그인</a></li>
+			<li><a href="#" style="float: right">회원가입</a></li>
+
+		</ul>
+
+	
+
+
+
+	
+	</nav>
+
+	
+		<img alt="여우이미지" src="${rootPath}/resources/imgs/fox.jpg">
+	
+
+
+	
+	<footer>
+		<address>CopyRight &copy; callor@callor.com</address>
+	</footer>
+
+
+</body>
+</html>

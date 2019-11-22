@@ -1,0 +1,3 @@
+
+11월 18, 2019 09:13:57.75 NEW SESSION
+11월 18, 2019 09:13:57.75 [3120:720:1118/091357.753:ERROR:component_installer.cc(320)] Failed to read manifest or verify installation for CRLSet (C:\Users\505-20\AppData\Local\Google\Chrome\User Data\CertificateRevocation\5517).: 지정된 파일을 찾을 수 없습니다. (0x2)
