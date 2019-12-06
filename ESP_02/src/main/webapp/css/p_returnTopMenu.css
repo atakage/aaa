@@ -1,0 +1,22 @@
+.return-top{
+    right: 15px;
+    bottom: 15px;
+    padding: 10px;
+    position: fixed;
+    z-index: 9999;
+    border: 1px solid black;
+    border-radius: 50%;
+    background: gray;
+    margin-right: 15%;
+    margin-bottom: 3%;
+    opacity: 0.5;
+    
+}
+
+.return-top a{
+
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
