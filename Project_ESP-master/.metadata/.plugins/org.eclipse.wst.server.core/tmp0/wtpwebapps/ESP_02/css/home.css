@@ -1,0 +1,11 @@
+@charset "UTF-8";
+        *,html,body{
+            margin:0 ;
+            padding:0;
+        }
+        html,body{
+            width:1200px;
+            height:100%;
+            background-color: rgb(75, 73, 73);
+        }
+

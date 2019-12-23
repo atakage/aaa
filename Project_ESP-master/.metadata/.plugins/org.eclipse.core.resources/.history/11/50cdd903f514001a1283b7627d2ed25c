@@ -1,0 +1,49 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<c:set var="rootPath" value="${pageContext.request.contextPath}"/>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="${rootPath}/css/home.css?ver=20191121001" type="text/css">
+    <link rel="stylesheet" href="${rootPath}/css/header.css?ver=20191121001" type="text/css">
+    <link rel="stylesheet" href="${rootPath}/css/mainnav.css?ver=20191121001" type="text/css">
+    <link rel="stylesheet" href="${rootPath}/css/sidenav.css?ver=20191121001" type="text/css">
+    <link rel="stylesheet" href="${rootPath}/css/body.css?ver=20191121001" type="text/css">
+    <link rel="stylesheet" href="${rootPath}/css/table.css?ver=20191121001" type="text/css">
+    <link rel="stylesheet" href="${rootPath}/css/footer.css?ver=20191121001" type="text/css">
+
+<%@ include file="/WEB-INF/views/include/include-title.jspf" %>
+	
+</head>
+<body>
+<%@ include file="/WEB-INF/views/include/include-header.jspf" %>
+<%@ include file="/WEB-INF/views/include/include-mainnav.jspf" %>
+
+    <sectino class="news_section">
+        <article>
+            <p>이용안내</p>
+        </article>
+        <article class="news_info_use">
+            <ul>
+                <li>지원 브라우저</li>
+                <p>익스플로러11, 엣지, 크롬</p>
+                <li>화면 해상도</li>
+                <p>978px</p>
+                <li>폰트</li>
+                <p>기본 폰트</p>
+            </ul>
+        </article>          
+    </sectino>
+    <footer>
+	   <ul>
+	           <li>CopyRight &copy; 우리</li>
+	           <li><a href="C:\developer\htmlwork\취업지원정책/이용안내.html">이용안내</a></li>
+	           <li><a href="C:\developer\htmlwork\취업지원정책/개인정보처리방침.html">개인정보처리방침</a></li>
+	           <li><a href="C:\developer\htmlwork\취업지원정책/개선의견수렴.html">개선의견수렴</a></li>
+	   </ul>
+    </footer>
+</body>
+</html>

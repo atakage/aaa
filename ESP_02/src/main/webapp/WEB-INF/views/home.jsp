@@ -8,7 +8,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>취업정책지원사이트</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="${rootPath}/css/main.css?ver=2019-11-30-002">
+<script>
+$(function(){
+	$(".ntitle-list").click(function(){
+		let id = $(this).attr("data-id")
+		document.location.href = "${rootPath}/news/view?id=" +id
+	})
+	$(".rtitle-list").click(function(){
+		let id = $(this).attr("data-id")
+		document.location.href = "${rootPath}/reference/view?id=" +id
+	})
+})
+</script>
 </head>
 <style>
 @charset "UTF-8";
@@ -106,13 +119,29 @@ body {
   border-top: none;
   list-style: none;
   
+  width:500px;
   height: 200px;
   text-align: left;
   font-size: 15px;
 }
-.tabcontent li{
+.tabcontent td{
     padding: 0.6rem;
     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.table-box{
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.insert-date{
+	width:90px;
+}
+.ntitle-list{
+	text-align: left;
+}
+.rtitle-list{
+	text-align: left;
 }
 .tabcontent span{
 	margin: 0 2rem;
@@ -181,19 +210,40 @@ td {
         </div>
         
         <div id="noti" class="tabcontent">
-            <li><a href="#">[공지] 이상의 사라지지 든 이것이다. 열매를 같으며, 바이며, 것이다.</a><span>2019.11.30</span></li>
-            <li><a href="#">[공지] 이상의 사라지지 든 이것이다. 열매를 같으며, 바이며, 것이다.</a><span>2019.11.30</span></li>
-            <li><a href="#">[공지] 이상의 사라지지 든 이것이다. 열매를 같으며, 바이며, 것이다.</a><span>2019.11.30</span></li>
-            <li><a href="#">[공지] 이상의 사라지지 든 이것이다. 열매를 같으며, 바이며, 것이다.</a><span>2019.11.30</span></li>
-            <li><a href="#">[공지] 이상의 사라지지 든 이것이다. 열매를 같으며, 바이며, 것이다.</a><span>2019.11.30</span></li>
+        	<c:choose>
+				<c:when test="${empty NLIST}">
+					<tr><td colspan="5">정책 자료가 없음</td></tr>
+				</c:when>
+				<c:otherwise>
+					<table class="table-box" border="0">		
+						<c:forEach items="${NLIST}" begin="0" end="4" step="1" var="vo">
+		                	<tr>
+								<td class="ntitle-list" data-id="${vo.n_seq}"><a href="#">${vo.n_title}</a></td>
+								<td class="insert-date">${vo.n_date}</td>
+							<tr>
+						</c:forEach>
+					</table>
+				</c:otherwise>
+			</c:choose>
+
         </div>
         
         <div id="news" class="tabcontent">
-            <li><a href="#">[소식] 별과 얼마나 아름답고 무엇이 설산에서 무엇을 그들은 아니다.</a><span>2019.11.30</span></li>
-            <li><a href="#">[소식] 별과 얼마나 아름답고 무엇이 설산에서 무엇을 그들은 아니다.</a><span>2019.11.30</span></li>
-            <li><a href="#">[소식] 별과 얼마나 아름답고 무엇이 설산에서 무엇을 그들은 아니다.</a><span>2019.11.30</span></li>
-            <li><a href="#">[소식] 별과 얼마나 아름답고 무엇이 설산에서 무엇을 그들은 아니다.</a><span>2019.11.30</span></li>
-            <li><a href="#">[소식] 별과 얼마나 아름답고 무엇이 설산에서 무엇을 그들은 아니다.</a><span>2019.11.30</span></li>
+            <c:choose>
+				<c:when test="${empty RLIST}">
+					<tr><td colspan="5">정책 자료가 없음</td></tr>
+				</c:when>
+				<c:otherwise>
+					<table class="table-box" border="0">		
+						<c:forEach items="${RLIST}" begin="0" end="4" step="1" var="vo">
+		                	<tr>
+								<td class="rtitle-list" data-id="${vo.d_seq}"><a href="#">${vo.d_title}</a></td>
+								<td class="insert-date">${vo.d_date}</td>
+							<tr>
+						</c:forEach>
+					</table>
+				</c:otherwise>
+			</c:choose>
         </div>
     </ul>
   
@@ -216,11 +266,10 @@ td {
   document.getElementById("defaultOpen").click();
   </script>
 
-
-	<video width="470" height="280" controls>
-		<source src="#" type="video/mp4">
-		브라우저에서 지원되는 포맷이 아닙니다.
-    </video>
+<div style="margin-left:10px">
+	<iframe width="452" height="281" src="https://www.youtube.com/embed/CmpO6FY2oXo" frameborder="0" allow="accelerometer; autoplay=1; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+	
 </article>
 
 
@@ -246,13 +295,13 @@ td {
 
     </tr>
     <tr class="tr4">
-        <td><img style="height: 3rem;" src="${rootPath}/images/policy_humen1.png"></td>
-        <td><img style="height: 3rem;" src="${rootPath}/images/policy_humen2.png"></td>
-        <td><img style="height: 3rem;" src="${rootPath}/images/policy_humen3.png"></td>
-        <td><img style="height: 3rem;" src="${rootPath}/images/policy_humen4.png"></td>
-        <td><img style="height: 3rem;" src="${rootPath}/images/policy_humen5.png"></td>
-        <td><img style="height: 100px;" src="${rootPath}/images/g.png"></td>
-        <td><img style="height: 100px;" src="${rootPath}/images/d.png"></td>
+        <td onClick="location.href='${rootPath}/esp/object'"><img style="height: 3rem;" src="${rootPath}/images/policy_humen1.png"></td>
+        <td onClick="location.href='${rootPath}/esp/object/fmmain'"><img style="height: 3rem;" src="${rootPath}/images/policy_humen2.png"></td>
+        <td onClick="location.href='${rootPath}/esp/object/mdmain'"><img style="height: 3rem;" src="${rootPath}/images/policy_humen3.png"></td>
+        <td onClick="location.href='${rootPath}/esp/object/damain'"><img style="height: 3rem;" src="${rootPath}/images/policy_humen4.png"></td>
+        <td onClick="location.href='${rootPath}/esp/object/frmain'"><img style="height: 3rem;" src="${rootPath}/images/policy_humen5.png"></td>
+        <td onClick="location.href='${rootPath}/esp/area/seoul'"><img style="height: 100px;" src="${rootPath}/images/g.png"></td>
+        <td onClick="location.href='${rootPath}/esp/area/gyeonggi'"><img style="height: 100px;" src="${rootPath}/images/d.png"></td>
     </tr>
 </table>
 <%@ include file="/WEB-INF/views/include/include-footer.jspf"%>

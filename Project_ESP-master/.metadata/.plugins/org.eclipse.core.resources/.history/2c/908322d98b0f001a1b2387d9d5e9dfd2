@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+section article {
+	display: inline-flex;
+	position: fixed;
+	left: 100px;
+}
+
+.notice {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 10px 50px;
+}
+
+.tbl_notice {
+	width: 30%;
+	height: 15%;
+	font-size: 20px;
+	text-align: center;
+	margin-top: 10px;
+}
+
+#main_notice {
+	font-size: 20px;
+	width: 300x;
+	border-bottom: 2px solid black;
+	padding: 5px 0;
+}
+
+.one_touch {
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+}

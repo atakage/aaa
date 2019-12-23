@@ -1,38 +1,35 @@
 package com.biz.esp.controller;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.biz.esp.domain.OpinionDTO;
+import com.biz.esp.service.OpinionService;
+
 @Controller
 public class ESPController {
 
-
+	@Autowired
+	OpinionService oService;
+	
+//	사이트 소개 페이지
+	@RequestMapping(value="/intro", method=RequestMethod.GET)
+	public String intro(Model model) {
+		
+		return "/intro";
+	}
 //	로그인 페이지
 	@RequestMapping(value="/login", method=RequestMethod.GET)
 	public String login(Model model) {
 		
 		return "/login/login";
 	}
-	
-//	회원가입 페이지
-	@RequestMapping(value="/join", method=RequestMethod.GET)
-	public String join_personal(Model model) {
-		
-		return "/join/personal_info_agree";
-	}
-	@RequestMapping(value="/join/agree", method=RequestMethod.GET)
-	public String joinAgree(Model model) {
-		
-		return "/join/personal_info_agree";
-	}
-	@RequestMapping(value="/join/join", method=RequestMethod.GET)
-	public String join(Model model) {
-		
-		return "/join/join";
-	}
-	
 	
 	
 	/*															--- 외부 컨트롤러로 뺌
@@ -72,29 +69,9 @@ public class ESPController {
 	
 	*/
 	
-//	소식 페이지
-	@RequestMapping(value="/news", method=RequestMethod.GET)
-	public String news(Model model) {
-		
-		return "/news/news";
-	}
-	@RequestMapping(value="/news/detail", method=RequestMethod.GET)
-	public String newsDetail(Model model) {
-		
-		return "/news/news_detail";
-	}
+
 	
-//	정책 자료실 페이지
-	@RequestMapping(value="/reference", method=RequestMethod.GET)
-	public String reference(Model model) {
-		
-		return "/reference/reference";
-	}
-	@RequestMapping(value="/reference/detail", method=RequestMethod.GET)
-	public String referenceDetail(Model model) {
-		
-		return "/reference/reference_detail";
-	}
+
 	
 //	이용약관 페이지
 	@RequestMapping(value="/infouse", method=RequestMethod.GET)
@@ -112,9 +89,37 @@ public class ESPController {
 	
 //	개선의견 페이지
 	@RequestMapping(value="/opinion", method=RequestMethod.GET)
-	public String opinion(Model model) {
+	public String opinion(OpinionDTO opinionDTO, Model model) {
 		
+		model.addAttribute("oDTO", opinionDTO);
 		return "/infouse/opinion";
+	}
+	
+	@RequestMapping(value="/opinion", method=RequestMethod.POST)
+	public String opinion(OpinionDTO opinionDTO, String strSeq, Model model) {
+		
+		OpinionDTO oDTO = opinionDTO;
+		
+		if(oDTO.getO_title().isEmpty()) {
+	         oDTO.setO_title("기본 제목 형식");
+	      }
+	      if(oDTO.getO_email().isEmpty()) {
+	         oDTO.setO_email("기본 제목 형식");
+	      }
+	      if(oDTO.getO_content().isEmpty()) {
+	         oDTO.setO_content("기본 내용 형식");
+	      }
+		
+		Date date = new Date();
+		SimpleDateFormat sd = new SimpleDateFormat("yyyy.MM.dd");
+		SimpleDateFormat st = new SimpleDateFormat("HH:mm:ss");
+		
+		String dateD = sd.format(date);
+		st.format(date);
+
+		oDTO.setO_date(dateD);
+		int ret = oService.insert(oDTO);
+		return "redirect:/opinion";
 	}
 	
 }

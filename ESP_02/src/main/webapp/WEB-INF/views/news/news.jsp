@@ -40,7 +40,20 @@
 	                    <th id="th3">작성자</th>
 	                    <th id="th4">등록일</th>
 	                    <th id="th5">첨부파일</th>
-	                    <th id="th6">분류</th>
+	                </tr>
+	                <tr>
+	                	<td>3</td>
+	                    <td><a href="${rootPath}/news/detail">(속보) 주말에는 만나기 힘들어</a></td>
+	                    <td>관리자</td>
+	                    <td>2019.12.07</td>
+	                    <td>파일은</td>
+	                </tr>
+	                <tr>
+	                    <td>2</td>
+	                    <td><a href="${rootPath}/news/detail">소식 페이지인데요</a></td>
+	                    <td>관리자</td>
+	                    <td>2019.12.07</td>
+	                    <td>파일은</td>
 	                </tr>
 	                <tr>
 	                    <td>1</td>
@@ -48,18 +61,8 @@
 	                    <td>작성자는</td>
 	                    <td>2019.12.01</td>
 	                    <td>파일은</td>
-	                    <td>공지사항</td>
 	                </tr>
 	                <tr>
-	                    <td></td>
-	                    <td></td>
-	                    <td></td>
-	                    <td></td>
-	                    <td></td>
-	                    <td></td>
-	                </tr>
-	                <tr>
-	                    <td></td>
 	                    <td></td>
 	                    <td></td>
 	                    <td></td>
@@ -72,18 +75,8 @@
 	                    <td></td>
 	                    <td></td>
 	                    <td></td>
-	                    <td></td>
 	                </tr>
 	                <tr>
-	                    <td></td>
-	                    <td></td>
-	                    <td></td>
-	                    <td></td>
-	                    <td></td>
-	                    <td></td>
-	                </tr>
-	                <tr>
-	                    <td></td>
 	                    <td></td>
 	                    <td></td>
 	                    <td></td>
@@ -96,6 +89,12 @@
 	                    <td></td>
 	                    <td></td>
 	                    <td></td>
+	                </tr>
+	                <tr>
+	                    <td></td>
+	                    <td></td>
+	                    <td></td>
+	                    <td></td>
 	                    <td></td>
 	                </tr>
 	                <tr>
@@ -104,10 +103,8 @@
 	                    <td></td>
 	                    <td></td>
 	                    <td></td>
-	                    <td></td>
 	                </tr>
 	                <tr>
-	                    <td></td>
 	                    <td></td>
 	                    <td></td>
 	                    <td></td>

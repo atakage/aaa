@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+section article {
+	display: inline-flex;
+	position: fixed;
+	left: 100px;
+}
+table{
+	width: 90%;
+	height: 70%;
+	font-size: 20px;
+	text-align: center;
+	margin:auto;
+}

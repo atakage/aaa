@@ -1,4 +1,4 @@
-package aaa.bbb.ccc;
+package test.testb.controller;
 
 import java.text.DateFormat;
 import java.util.Date;

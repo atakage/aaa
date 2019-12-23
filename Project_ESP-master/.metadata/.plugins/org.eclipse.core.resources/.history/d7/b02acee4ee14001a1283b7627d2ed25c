@@ -1,0 +1,32 @@
+package com.biz.esp.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+@RequestMapping(value="/esp")
+@Controller
+public class ESPController {
+
+	@RequestMapping(value="/list", method=RequestMethod.GET)
+	public String list(Model model) {
+		
+		model.addAttribute("BODY","ESP-LIST");
+		
+		return "object/object-main";
+	}
+	
+	@RequestMapping(value="/object", method=RequestMethod.GET)
+	public String object(Model model) {
+		
+		return "object_main";
+	}
+	
+	@RequestMapping(value="/area", method=RequestMethod.GET)
+	public String area(Model model) {
+		
+		return "area";
+	}
+	
+}

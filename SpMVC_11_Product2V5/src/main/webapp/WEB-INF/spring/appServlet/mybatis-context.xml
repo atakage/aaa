@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+
+	<!-- dataSource 생성 -->
+	<bean id="ds" class="org.apache.commons.dbcp2.BasicDataSource">
+		<property name="driverClassName" value="oracle.jdbc.OracleDriver"/>
+		<property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"/>
+		<property name="username" value="iouser"/>
+		<property name="password" value="iouser"/>
+	</bean>
+	
+	
+	
+	<!-- sqlSession을 관리할 관리자 생성 -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+	
+		<property name="dataSource" ref="ds"/>
+		<property name="configLocation" value="/WEB-INF/spring/mybatis/mybatis-config.xml"/>
+		<property name="mapperLocations" value="/WEB-INF/spring/mybatis/mapper/*-mapper.xml"></property>
+		<property name="typeAliases" value="com.biz.product.domain.ProductDTO"/>
+		<property name="typeAliasesPackage" value="com.biz.product.domain"/>		
+		
+		<!-- typeAliasesPackage 
+			
+			value로 설정된 모든 DTO, VO클래스를 자동으로 Alias 등록
+			클래스 이름의 첫글자를 소문자로 하고 나머지는 그대로 사용 ( java에서 객체명명패턴 MyClass myClass = new MyClass()
+		
+		
+		typeAliases 는 개별적으로 크래스들 alias 설정
+		
+		
+		-->
+	
+	</bean>
+	
+	
+	<!-- mapper.xml과 Dao연동하여 DBMS 연산을 수행 -->
+	<bean class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactory"/>
+	</bean>
+
+</beans>

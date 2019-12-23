@@ -1,0 +1,43 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<c:set var="rootPath" value="${pageContext.request.contextPath}"/>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<%@ include file="/WEB-INF/views/include/include-title.jspf" %>
+	
+</head>
+<body>
+	<%@ include file="/WEB-INF/views/include/include-header.jspf" %>
+	<%@ include file="/WEB-INF/views/include/include-mainnav.jspf" %>
+	<%@ include file="/WEB-INF/views/include/include-body.jspf" %>
+	<p></p>
+            <p></p>
+	            <table border="0">
+            	<tr>
+            		<td>본..</td>
+            	</tr>
+            	<tr>
+            		<td>문..</td>
+            	</tr>
+            </table>
+            <table border="1">
+            	<tr>
+	            	<th>제목</th>
+	            	<th>등록일</th>
+            	</tr>
+            	<tr>
+            		<td>제목이 입력되는 곳입니다</td>
+            		<td>11-25</td>
+            	</tr>
+            	<tr>
+            		<td>어서오세요</td>
+            		<td>11-25</td>
+            </table>
+	<%@ include file="/WEB-INF/views/include/include-footer.jspf" %>
+	
+</body>
+</html>

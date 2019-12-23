@@ -102,4 +102,34 @@
 		<item value="org.springsource.sts.package:3.9.10.201909190739-RELEASE-e413"/>
 		<item value="org.springsource.sts:3.9.10.201909190739-RELEASE"/>
 	</list>
+	<section name="CleanDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="710"/>
+		<item key="DIALOG_Y_ORIGIN" value="242"/>
+		<item key="DIALOG_WIDTH" value="500"/>
+		<item key="DIALOG_HEIGHT" value="418"/>
+		<item key="TOGGLE_SELECTED" value="false"/>
+	</section>
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\bizwork\springwork"/>
+			<item value="C:\bizwork\springwork\ESP02(20191215)\ESP_02"/>
+			<item value="C:\bizwork\springwork\ESP_02"/>
+			<item value=""/>
+			<item value="C:\Users\505-20\Desktop\ESP0220191209\ESP_02"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+			<item value="C:\bizwork\Biz_505_2019_11_Spring-master.zip"/>
+			<item value="C:\bizwork\ESP02-2019-12-10--master.zip"/>
+			<item value="C:\bizwork\springwork\Project_ESP-master.zip"/>
+			<item value="C:\bizwork\springwork\Project_ESP-master (1).zip"/>
+			<item value="C:\bizwork\springwork\Biz_505_2019_11_Spring-master.zip"/>
+			<item value="C:\Users\505-20\Desktop\Project_ESP-master.zip"/>
+		</list>
+	</section>
 </section>

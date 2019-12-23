@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+section article {
+	display: inline-flex;
+	position: fixed;
+	left: 100px;
+}
+table{
+	width: 30%;
+	height: 15%;
+	font-size: 20px;
+	text-align: center;
+	margin-left: 50px;
+}
+p{
+	font-size:20px;
+	margin-top:10px;
+	margin-left:50px;
+	border-bottom: 2px solid black;
+	padding-bottom: 30px;
+}

@@ -1,0 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<c:set var="rootPath" value="${pageContext.request.contextPath}" />
+<link rel="stylesheet" href="${rootPath}/css/footer.css?ver=20191121001"
+	type="text/css">
+<footer>
+	<ul>
+		<li>CopyRight &copy; 우리</li>
+		<li><a href="${rootPath}/infouse">이용안내</a></li>
+		<li><a href="${rootPath}/privacy">개인정보처리방침</a></li>
+		<li><a href="${rootPath}/privacy">개선의견수렴</a></li>
+	</ul>
+</footer>

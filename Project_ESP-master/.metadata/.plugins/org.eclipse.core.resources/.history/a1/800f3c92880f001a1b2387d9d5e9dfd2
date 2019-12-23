@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+section article {
+	display: inline-flex;
+	position: fixed;
+	left: 100px;
+}
+.notice{
+	display:flex;
+	flex-direction: row;
+}
+.tbl_notice{
+	width: 30%;
+	height: 15%;
+	font-size: 20px;
+	text-align: center;
+	margin-top:10px;
+	margin-left: 50px;
+}
+#main_notice{
+	font-size:20px;
+	margin-left:50px;
+	border-bottom: 2px solid black;
+	padding : 5px 0;
+	width:300x;
+	
+}

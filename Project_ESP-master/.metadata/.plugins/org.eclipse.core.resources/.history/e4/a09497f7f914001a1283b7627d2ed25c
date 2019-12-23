@@ -1,0 +1,37 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<c:set var="rootPath" value="${pageContext.request.contextPath}" />
+<link rel="stylesheet"
+	href="${rootPath}/css/mainnav.css?ver=20191121001" type="text/css">
+<link rel="stylesheet" href="${rootPath}/css/home.css?ver=20191121001" type="text/css">
+<link rel="stylesheet" href="${rootPath}/css/header.css?ver=20191121001" type="text/css">
+<link rel="stylesheet" href="${rootPath}/css/mainnav.css?ver=20191121001" type="text/css">
+<link rel="stylesheet" href="${rootPath}/css/sidenav.css?ver=20191121001" type="text/css">
+<link rel="stylesheet" href="${rootPath}/css/body.css?ver=20191121001" type="text/css">
+<link rel="stylesheet" href="${rootPath}/css/table.css?ver=20191121001" type="text/css">
+<link rel="stylesheet" href="${rootPath}/css/footer.css?ver=20191121001" type="text/css">
+<nav>
+	<ul>
+		<li><a href="#">사이트 소개</a></li>
+		<li class="drop_main"><a href="${rootPath}/object">대상별 정책</a>
+			<div class="drop_sub">
+				<a href="${rootPath}/object">청년</a>
+				<a href="#">여성</a>
+				<a href="#">중장년</a>
+				<a href="#">장애인</a>
+				<a href="#">외국인</a>
+			</div>
+		</li>
+		<li class="drop_main"><a href="${rootPath}/esp/list">지역별 정책</a>
+			<div class="drop_sub">
+				<a href="${rootPath}/area">광역시별 조회</a>
+				<a href="#">도별 조회</a>
+			</div>
+		</li>
+		<li><a href="#">소식</a></li>
+		<li><a href="#">정책 자료실</a></li>
+		<li id="m6"><a href="#">로그인</a></li>
+        <li><a href="#">회원가입</a></li>
+	</ul>
+</nav>
